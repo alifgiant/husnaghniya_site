@@ -1,0 +1,9 @@
+# language: node_js
+# node_js:
+# - node
+# script:
+# - 
+# deploy:
+#   provider: firebase
+#   token:
+#     secure: KAOpRuiY8K+gg9oHEPMXvqWT6qjFmC3wFjR400hPYz4g57lRIDo612kxDu4zEdf0dhe0hu/cqTqMb/45L02Fu5hEiDNw+xFT95WeWXW9NQc5ksaHgPnTEgXlo1LrIQUPDcbInnFqVk/VKteeqfBbvk0fnPpnzyV32usZ0iigTSeoDjGayNJa/ZJw6I5pF1FZSpu1MIpdn+BHusa5A3w70n8y6S0lZOIPiXdjwSn0QUqQIBwOcbl38xQjlm1K2bQs0fbjbd+052nGl46AioYCwWMjd24jrQsLNLPb4qJ6RjGzvopedC2wRNIPi1SxVF0N7O+C8pm4xE4ER1zybcSUFcB5prJnInkLLPfsICk/E8yMbDNNMqg2+5LNx4bv7w3FZ4ODUGMBmJhkFx5nnK2KjlfaER62sCnYKFRYETin6cXzFE/FKUtU8WGD8Btajqna6J47bsJXUOdaKB4JMhOFDf3mvSpgf6h3wrnSue/quio0DNWvqEFvqZ0ZwTdw9X5V7QKnZfQn/pwbY9HrJCnP5HP6fb0fCjaomJGiFMLFTH6XdB9kYvXQhGHCcFjgEkRJSlJ3NFMgR156txuNIyGw2zlwqRuNSICSNGX1Hg+UCxgHNnFJNcUSpu64dNziXUHEJ5FbvoQLr7v05cKzH5uqrhUOTdP53HdVhNnXWby+b7M=
