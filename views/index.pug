@@ -1,17 +1,64 @@
 doctype html
 html
   head
-    title= appName
+    title= stageName+' '+appName
     meta(charset='utf-8')
-    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
     meta(name="viewport" content="width=device-width, initial-scale=1")
     meta(name="description", content=description)
-    link(rel="shortcut icon", href="./assets/images/husna-icon.png", type="image/x-icon")
-    link(rel="stylesheet", href="./assets/css/uikit.min.css")
-    link(rel="stylesheet", href="./assets/css/husna.css")
+    link(rel="shortcut icon" href="./assets/images/husna-icon.png" type="image/x-icon")
+    link(rel="stylesheet" href="./assets/css/uikit.min.css")
+    link(rel="stylesheet" href="./assets/css/husna.css")
   body
-    | alif girl
+    //- nav.uk-navbar-container.uk-navbar-transparent(uk-navbar)
+      .uk-navbar-left
+        a.uk-navbar-item.uk-logo(href="#")
+          img.uk-preserve(uk-img="data-src:./assets/images/husna-icon.png", alt=appName, style="height: 3.8rem;")
+        //- .uk-navbar-right(class="uk-visible@s")
+        ul.uk-navbar-nav
+          li.uk-active
+            a.uk-text-capitalize(href='#about' uk-scroll='') Welcome
+          li
+            a.uk-text-capitalize(href='#illustrations' uk-scroll='') Illustrations
+          li
+            a.uk-text-capitalize(href='#books' uk-scroll='') Books
+          li
+            a.uk-text-capitalize(href='#store' uk-scroll='') Store
+          li
+            a.uk-text-capitalize(href='#faq' uk-scroll='') FAQ
+    //- #about.uk-section
+      .husna.title.uk-text-uppercase.uk-text-center= stageName
+      .husna.subtitle.uk-text-uppercase.uk-text-center.uk-text-bolder= appName
+      .uk-flex.uk-flex-center
+        .uk-padding-small
+          i.husna-icon.the-icons.icon-instagram-filled &#xf31f;
+          span.i-name= socials.ig.name
+        .uk-padding-small
+          i.husna-icon.the-icons.icon-facebook &#xf09a;
+          span.i-name= socials.fb.name
+        .uk-padding-small
+          i.husna-icon.the-icons.icon-linkedin &#xf0e1;
+          span.i-name= socials.in.name
+        .uk-padding-small
+          i.husna-icon.the-icons.icon-twitter &#xf099;
+          span.i-name= socials.twitter.name
+
+    #images.green(uk-height-viewport="expand: true")
+      - var n = 0;
+      while n < 3
+        .uk-grid-collapse(class='uk-child-width-expand@s' uk-grid='').a-third
+          - var j = 1;
+          while j < 5
+            - var img = "./assets/images/portfolio/books/"+( (5 * n) + j++)+".jpg"
+            div(data-src=img uk-img="")
+              //- img(data-src=img width='' height='' alt='' uk-img='')
+        - n++
+
+
+
   footer
+    script(src="./assets/js/masonry.pkgd.min.js")
     script(src="./assets/js/uikit.min.js")
     script(src="./assets/js/uikit-icons.min.js")
+    script(src="./assets/js/picasset.js")
     script(src="./assets/js/husna.js")

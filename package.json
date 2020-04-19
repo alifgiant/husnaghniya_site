@@ -13,6 +13,7 @@
     },
     "dependencies": {},
     "devDependencies": {
+        "glob": "^7.1.6",
         "pug-cli": "^1.0.0-alpha6"
     },
     "license": "MIT"

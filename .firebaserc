@@ -2,5 +2,17 @@
   "projects": {
     "default": "husnaghniya-site",
     "prod": "husnaghniya-production"
+  },
+  "targets": {
+    "husnaghniya-site": {
+      "hosting": {
+        "dev": [
+          "husnaghniya-site"
+        ],
+        "prod": [
+          "husnaghniya"
+        ]
+      }
+    }
   }
 }
