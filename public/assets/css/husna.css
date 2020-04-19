@@ -12,16 +12,8 @@ html {
     font-family: 'Montserrat', sans-serif;
 }
 
-.bg1 {
-    background-image: url('../images/portfolio/1.jpg');
-}
-
 .green {
     background: green;
-}
-
-.a-third {
-    height: 33vh;
 }
 
 .the-icons {

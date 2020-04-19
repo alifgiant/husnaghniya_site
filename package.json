@@ -7,7 +7,7 @@
     "author": "@alifgiant",
     "private": true,
     "scripts": {
-        "build": "pug views -o ./public -P -O ./config.json",
+        "build": "node ./asset.js && pug views -o ./public -P -O ./config.json",
         "deploy-dev": "firebase deploy --only hosting:dev",
         "deploy-prod": "firebase deploy --only hosting:prod"
     },
