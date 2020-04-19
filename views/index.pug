@@ -10,22 +10,6 @@ html
     link(rel="stylesheet" href="./assets/css/uikit.min.css")
     link(rel="stylesheet" href="./assets/css/husna.css")
   body
-    //- nav.uk-navbar-container.uk-navbar-transparent(uk-navbar)
-      .uk-navbar-left
-        a.uk-navbar-item.uk-logo(href="#")
-          img.uk-preserve(uk-img="data-src:./assets/images/husna-icon.png", alt=appName, style="height: 3.8rem;")
-        //- .uk-navbar-right(class="uk-visible@s")
-        ul.uk-navbar-nav
-          li.uk-active
-            a.uk-text-capitalize(href='#about' uk-scroll='') Welcome
-          li
-            a.uk-text-capitalize(href='#illustrations' uk-scroll='') Illustrations
-          li
-            a.uk-text-capitalize(href='#books' uk-scroll='') Books
-          li
-            a.uk-text-capitalize(href='#store' uk-scroll='') Store
-          li
-            a.uk-text-capitalize(href='#faq' uk-scroll='') FAQ
     //- #cover.uk-container
       img(data-src='./assets/images/cover.jpeg' width='' height='' alt='' uk-img='')
     #about.uk-section
@@ -52,11 +36,15 @@ html
             span.i-name= socials.twitter.name
     #images.uk-container(uk-filter="target: .js-filter")
       ul.uk-subnav.uk-subnav-pill
-        li.uk-active(uk-filter-control="")
+        //- li.uk-active(uk-filter-control="")
           a(href='#') All
-        each val in asset.types
-          li(uk-filter-control="[data-tags*='"+ val +"']")
-            a(href='#')= val
+        each val, index in asset.types
+          if index == 0
+            li.uk-active(uk-filter-control="[data-tags*='"+ val +"']")
+              a(href='#')= val
+          else
+            li(uk-filter-control="[data-tags*='"+ val +"']")
+              a(href='#')= val
         li(uk-filter-control="[data-tags*='black']")
           a(href='#') Store
         li(uk-filter-control="[data-tags*='dark']")
@@ -64,8 +52,6 @@ html
       ul.js-filter.uk-child-width-1-2.uk-text-center(class='uk-child-width-1-4@m' uk-grid="masonry: true")
         each val in asset.images
           - var img = "./assets/images/portfolio/" + val.type + "/"+ val.name
-          //- div(data-src=img uk-img="")
-          //- div.uk-flex-center.uk-grid-column-small.uk-grid-row-small(data-tags='black dark')
           div(data-tags=val.type)
             img(data-src=img width='' height='' alt='' uk-img='')
 
