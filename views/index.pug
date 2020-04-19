@@ -45,15 +45,40 @@ html
           else
             li(uk-filter-control="[data-tags*='"+ val +"']")
               a(href='#')= val
-        li(uk-filter-control="[data-tags*='black']")
+        li(uk-filter-control="[data-tags*='store']")
           a(href='#') Store
-        li(uk-filter-control="[data-tags*='dark']")
+        li(uk-filter-control="[data-tags*='FAQ']")
           a(href='#') FAQ
-      ul.js-filter.uk-child-width-1-2.uk-text-center(class='uk-child-width-1-4@m' uk-grid="masonry: true")
+      ul.js-filter.uk-text-center(uk-grid="masonry: true")
         each val in asset.images
           - var img = "./assets/images/portfolio/" + val.type + "/"+ val.name
-          div(data-tags=val.type)
+          div(data-tags=val.type class="uk-width-1-2 uk-width-1-4@m")
             img(data-src=img width='' height='' alt='' uk-img='')
+        div(data-tags='store').uk-text-left.uk-width-1-1
+          .husna.body.uk-text-uppercase.uk-text-center Maaf belum buka dulu ya
+        div(data-tags='FAQ').uk-text-left
+          article#b7033b2e-d789-4c35-ad49-b82f4f7f8ad0
+            .husna.body
+              ul#1a633968-4666-4bf5-996e-38e8534e867c.toggle
+                li
+                  details(open='')
+                    summary Dimana saya tinggal?
+                    p#9b2e8407-cc01-4c2d-8b53-0ac9b2f30a7d
+                      | Saya tinggal di Tangerang Selatan, kalian yg punya tempat makan enak 
+                      em hit me up
+                      |  di IG yahh
+              ul#3824b750-6e62-4971-a48d-468850bc237b.toggle
+                li
+                  details(open='')
+                    summary Apakah saya terbuka untuk freelance?
+                    p#c6882dfa-4c15-4097-a0e8-31aa435b79c1 Selalu!!! contact me ASAP!
+              ul#24ef3e47-16cf-49c5-93d9-449db111ff69.toggle
+                li
+                  details(open='')
+                    summary Apakah saya jomblo?
+                    p#50454875-d42b-427b-9872-14c8edf7227d Mau tau atau mau tau ajah? &#x1F440;
+
+
 
   footer
     script(src="./assets/js/uikit.min.js")
